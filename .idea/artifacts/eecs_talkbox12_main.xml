@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="eecs.talkbox12.main">
+    <output-path>$PROJECT_DIR$/out/artifacts/eecs_talkbox12_main</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="talkboxnew.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="image" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="file-copy" path="$PROJECT_DIR$/libs/JARVIS-API.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/voice-cmu-slt-hsmm-5.2.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/marytts-client-5.2-jar-with-dependencies.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/marytts-lang-en-5.2.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/marytts-runtime-5.2-jar-with-dependencies.jar" />
+      <element id="module-output" name="talkbox12.main" />
+    </root>
+  </artifact>
+</component>

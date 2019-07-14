@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+    id 'com.gradle.build-scan' version '1.16'
+}
+
+apply plugin: 'application'
+
+mainClassName = 'talkboxnew.Main'
+
+group 'eecs'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
+}
+
+dependencies {
+    compile group: 'com.google.cloud', name: 'google-cloud-texttospeech', version: '0.80.0-beta'
+    compile group: 'uk.ac.abdn', name: 'SimpleNLG', version: '4.4.8'
+    compile group: 'org.controlsfx', name: 'controlsfx', version: '8.40.14'
+    compile group: 'de.dfki.mary', name: 'voice-cmu-slt-hsmm', version: '5.2'
+    compile group: 'org.apache.ant', name: 'ant-apache-log4j', version: '1.10.5'
+
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.0-M1'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.testfx:testfx-junit:4.0+'
+
+    compile files('libs/JARVIS-API.jar')
+
+}
+
+task utilJar(type: Jar) {
+    baseName = "logger"
+    manifest {
+        attributes "Main-Class": "logger.Main"
+    }
+
+    from(sourceSets.main.output) {
+        // filter to only include certain class files (Ant glob pattern)
+        include "some/package/**"
+    }
+}
+
+//test {
+//    useJUnitPlatform()
+//    testLogging {
+//        events "passed", "skipped", "failed"
+//    }
+//    afterSuite { suite, result ->
+//        result.exception?.printStackTrace()
+//    }
+//}
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
