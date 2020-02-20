@@ -1,5 +1,5 @@
-# TalkBox ![travis](https://travis-ci.org/richardrobinson0924/TalkBox2.svg?branch=master)
+# TalkBox ![travis](https://travis-ci.org/ashishranjanth/TalkBox_Final.svg?branch=master)
 
-Documentation available at the [Wiki](https://github.com/richardrobinson0924/TalkBox2/wiki).
+Documentation available at the [Wiki](https://github.com/ashishranjanth/TalkBox_Final/wiki).
 
-Releases available at [Releases](https://github.com/richardrobinson0924/TalkBox2/releases
+Releases available at [Releases](https://github.com/ashishranjanth/TalkBox_Final/releases
