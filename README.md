@@ -2,4 +2,3 @@
 
 Documentation available at the [Wiki](https://github.com/ashishranjanth/TalkBox_Final/wiki).
 
-Releases available at [Releases](https://github.com/ashishranjanth/TalkBox_Final/releases
